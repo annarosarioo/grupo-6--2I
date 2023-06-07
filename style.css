@@ -84,9 +84,9 @@ body {
 }
 
 .formulario{
-    width: 400px;
-    padding: 30px;
-    border:1px solid #ccc;
+
+    padding: 0 30px;
+ 
 }
 .formulario p{
     width: 100%;
