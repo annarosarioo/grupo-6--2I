@@ -13,3 +13,20 @@ position: fixed;
 top: 0;
 width: 100%;
 }
+.corpo-div-conteudo {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.8;
+}
+
+.paragrafo-um {
+    text-align: justify;
+}
+
+.foto-push-button {
+    width:30%;
+    padding: 40px;
+}
+
+.corpo-titulo {
+    text-decoration: underline;
+}
