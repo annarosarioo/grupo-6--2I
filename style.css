@@ -199,3 +199,8 @@ input[type=submit]{
     visibility: visible;
     z-index: 10;
 }
+
+.foto-push-button {
+    width: 30%;
+    padding: 40px;
+}
