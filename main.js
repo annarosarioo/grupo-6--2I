@@ -2,7 +2,7 @@ function TocaSomPom () {
     document.querySelector('#som_tecla_pom').play();
 }
 
-const ListaDeSons = document.querySelectorA11('.tecla');
+const ListaDeSons = document.querySelectorAll('.tecla');
 
 let Contador = 0;
 
