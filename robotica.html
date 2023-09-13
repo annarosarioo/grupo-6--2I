@@ -71,63 +71,63 @@
        <p> #include <TM1637Display.h> </p>
           <p>#define CLK A4</p>
             <p>#define DIO A5</p>
-            <p>#define Ba 12
-            #define Bb 11
-            #define Bc 10
-            #define Rf 6
-            #define buzzer 9
+            <p>#define Ba 12</p>
+            <p>define Bb 11</p>
+            <p>#define Bc 10</p>
+            <p>#define Rf 6</p>
+            <p>#define buzzer 9</p>
             
-            int Ba_l = 0;
-            int Bb_l = 0;
-            int Bc_l = 0;
+            <p>int Ba_l = 0;</p>
+            <p>int Bb_l = 0;</p>
+            <p>int Bc_l = 0;</p>
             
-            int vb =0;
+            <p>int vb =0;</p>
                 
-            TM1637Display display(CLK, DIO);
+            <p>TM1637Display display(CLK, DIO);</p>
             
-            void setup(){
-              display.setBrightness(15);
-              pinMode(Ba, INPUT);
-              pinMode(Bb, INPUT);
-              pinMode(Bc, INPUT);
+            <p>void setup(){</p>
+              <p>display.setBrightness(15);</p>
+              <p>pinMode(Ba, INPUT);</p>
+              <p>pinMode(Bb, INPUT);</p>
+              <p>pinMode(Bc, INPUT);</p>
             
-              display.showNumberDec(0, false);
-              noTone(buzzer);
-              Serial.begin(9600);
-            }
+              <p>display.showNumberDec(0, false);</p>
+              <p>noTone(buzzer);</p>
+              <p>Serial.begin(9600);</p>
+            <p> }</p>
             
-            void loop(){
-              int Rf_l = digitalRead(Rf);
-              if (Rf_l == 1){
-                for(int i = 2;i <= 300; i++){
-                    display.showNumberDec(i, false);
-                    int Ba_l = digitalRead(Ba);
-                    int Bb_l = digitalRead(Bb);
-                    int Bc_l = digitalRead(Bc);
-                    delay(1);
-                    if(Ba_l == 1 ){
-                      vb = 1;
-                      break;
-                    }
-                    if (Bb_l == 1 || Bc_l == 1){
-                      break;
-                    }
+              <p>void loop(){</p>
+              <p>int Rf_l = digitalRead(Rf);</p>
+              <p>if (Rf_l == 1){</p>
+              <p>for(int i = 2;i = 300; i++){</p>
+                 <p>display.showNumberDec(i, false);</p>
+                    <p>int Ba_l = digitalRead(Ba);</p>
+                    <p>int Bb_l = digitalRead(Bb);</p>
+                    <p>int Bc_l = digitalRead(Bc);</p>
+                    <p>delay(1);</p>
+                    <p>if(Ba_l == 1 ){</p>
+                      <p>vb = 1;</p>
+                      <p>break;</p>
+                    <p>}</p>
+                    <p>if (Bb_l == 1 || Bc_l == 1){</p>
+                      <p>break;</p>
+                    <p>}</p>
                   
-                }
-                if (vb == 0){
-                  display.showNumberDec(8888, false);
-                  tone(buzzer, 1000, 1000000);
-                  delay(1000000);
-               }
-               else{
-                display.showNumberDec(0, false);
-                noTone(buzzer);
-                vb = 0;
-               }
+                <p>}</p>
+                <p>if (vb == 0){</p>
+                  <p>display.showNumberDec(8888, false);</p>
+                  <p>tone(buzzer, 1000, 1000000);</p>
+                  <p>delay(1000000);</p>
+               <p>}</p>
+               <p>else{</p>
+                <p>display.showNumberDec(0, false);</p>
+                <p>noTone(buzzer);</p>
+                <p>vb = 0;</p>
+               <p>}</p>
                
-              }
+              <p>}</p>
             
-            }
+            <p>}</p>
        </p>
     </div>
     </div>
