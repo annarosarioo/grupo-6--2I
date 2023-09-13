@@ -42,8 +42,8 @@
        <div class="corpo-div-conteudo">
         <h2 class="corpo-titulo"> Central de segurança </h2>
         <br>
-       <p> Algoritmo de montagem
-
+       <p> Algoritmo de montagem </p>
+        <p>
         Conecte o GND do arduino aos segmentos negativos da protoboard;
         Conecte o 5V do arduino aos segmentos positivos da protoboard;
         Coloque três push button no centro da protoboard;
@@ -63,11 +63,73 @@
         Conecte um resistor de 150Ω no cátodo do led; 
         Conecte o led no segmento positivo da protoboard(Passando pelo resistor); </p>
        <br>
-       <p><a href="https://drive.google.com/file/d/1TYt-z8HCCBgTSfXR3JGq-XdIanwOzXQw/view?usp=sharing" >video central </a>
+       <p><a href="https://drive.google.com/file/d/1TYt-z8HCCBgTSfXR3JGq-XdIanwOzXQw/view?usp=sharing" > imagem central </a>
        </p> 
        <br>
        <p> Clicar no link para a imagem </p>
        
+       <p>
+        #include <TM1637Display.h>
+            #define CLK A4
+            #define DIO A5
+            #define Ba 12
+            #define Bb 11
+            #define Bc 10
+            #define Rf 6
+            #define buzzer 9
+            
+            int Ba_l = 0;
+            int Bb_l = 0;
+            int Bc_l = 0;
+            
+            int vb =0;
+                
+            TM1637Display display(CLK, DIO);
+            
+            void setup(){
+              display.setBrightness(15);
+              pinMode(Ba, INPUT);
+              pinMode(Bb, INPUT);
+              pinMode(Bc, INPUT);
+            
+              display.showNumberDec(0, false);
+              noTone(buzzer);
+              Serial.begin(9600);
+            }
+            
+            void loop(){
+              int Rf_l = digitalRead(Rf);
+              if (Rf_l == 1){
+                for(int i = 2;i <= 300; i++){
+                    display.showNumberDec(i, false);
+                    int Ba_l = digitalRead(Ba);
+                    int Bb_l = digitalRead(Bb);
+                    int Bc_l = digitalRead(Bc);
+                    delay(1);
+                    if(Ba_l == 1 ){
+                      vb = 1;
+                      break;
+                    }
+                    if (Bb_l == 1 || Bc_l == 1){
+                      break;
+                    }
+                  
+                }
+                if (vb == 0){
+                  display.showNumberDec(8888, false);
+                  tone(buzzer, 1000, 1000000);
+                  delay(1000000);
+               }
+               else{
+                display.showNumberDec(0, false);
+                noTone(buzzer);
+                vb = 0;
+               }
+               
+              }
+            
+            }
+       </p>
     </div>
     </div>
 
