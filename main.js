@@ -1,5 +1,5 @@
-function TocaSomPom () {
-    document.querySelector('#som_tecla_pom').play();
+function TocaSomPom (idElementoAudio) {
+    document.querySelector(idElementoAudio).play();
 }
 
 
@@ -11,9 +11,9 @@ const ListaDeSons = document.querySelectorAll('.tecla');
 let Contador = 0;
 
 //enquanto - conição
-while (Contador < 9) {
+while (Contador < ListaDeSons.length) {
    //acessando um elemento da lista 
-   ListaDeSons[Contador].onclick = TocaSomPom;
+   ListaDeSons[Contador].onclick = tocar('TocaSomPom');
    //mudei o valor da variavel
     Contador = Contador + 1;
    //console ta onversando comigo
