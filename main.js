@@ -4,22 +4,29 @@ function TocaSomPom (idElementoAudio) {
 
 //constante = Lista dos botões
 const ListaDeSons = document.querySelectorAll('.tecla');
-
-//variavel = 0 fixo
 let Contador = 0;
 
-//enquanto-condição
-while (Contador < ListaDeSons.length) {
-   //acessando um elemento da lista 
-   Lista[Contador].onclick = function () {
-Tocar ("#som_tecla_pom")
-   }
+while (Contador < lista.lenght) {
    const classe = lista[Contador].classList[1];
+   //console.log(classe);
 
-   console.log(classe);
-    Contador = Contador + 1;
+   const idSom = '#som_${classe}';
+   //console.log(idSom);
 
-   console.log(Contador);
+ 
+   lista[Contador].onclick = function () {
+     tocar ("#som_tecla_toim")
+   }
+
+   Contador = Contador + 1;
+    //console.log(Contador);
+   
+    tecla.onkeydown = function
+    tecla.classList.add('ativa');
+}
+   tecla.onkeyup = function
+    tecla.classList.remove('ativa');
+ }
 } 
 
 
