@@ -8,18 +8,14 @@ let Contador = 0;
 
 while (Contador< ListaDeSons.length) {
   const tecla = ListaDeSons[Contador];
-  const classe = tecla.classList [1];
-
-
-   const classe = ListaDeSons[Contador].classList [1];
+  const classe = tecla.classList[1];
    //console.log(classe);
 
    const idSom = `#som_${classe}`;
    //console.log(idSom);
-
  
    ListaDeSons[Contador].onclick = function () {
-     tocar (idSom)
+     TocaSomPom(idSom)
    }
 
    Contador = Contador + 1;
