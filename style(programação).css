@@ -1,2 +1,7 @@
-tecla{padding: 30px;}
+.tecla{padding: 30px;}
+.tecla.ativa,
+.tecla:active{
+    background-color: blue;
+    box-shadow: 3px 3px 3px goldenrod;
+}
 
