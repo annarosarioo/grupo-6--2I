@@ -8,11 +8,11 @@ let Contador = 0;
 
 while (Contador< Lista.lenght) {
   const tecla = ListaDeSons[Contador];
-  const classe = tecla.classList[1];
+  const classe = tecla.classList [1];
 
 }
 
-   const classe = ListaDeSons[Contador].classList[1];
+   const classe = ListaDeSons[Contador].classList [1];
    //console.log(classe);
 
    const idSom = `#som_${classe}`;
