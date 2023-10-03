@@ -30,4 +30,4 @@ let Contador = 0;
    tecla.onkeyup = function () {
     tecla.classList.remove('ativa');
  }
-} 
+
