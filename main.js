@@ -6,11 +6,10 @@ function TocaSomPom (idElementoAudio) {
 const ListaDeSons = document.querySelectorAll('.tecla');
 let Contador = 0;
 
-while (Contador< Lista.lenght) {
+while (Contador< ListaDeSons.length) {
   const tecla = ListaDeSons[Contador];
   const classe = tecla.classList [1];
 
-}
 
    const classe = ListaDeSons[Contador].classList [1];
    //console.log(classe);
@@ -36,3 +35,4 @@ while (Contador< Lista.lenght) {
     tecla.classList.remove('ativa');
  }
 
+}
