@@ -14,7 +14,7 @@ while (Contador< ListaDeSons.length) {
    const idSom = `#som_${classe}`;
    //console.log(idSom);
  
-   ListaDeSons[Contador].onclick = function () {
+   tecla.onclick = function () {
      TocaSomPom(idSom);
    }
 
