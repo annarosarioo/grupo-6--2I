@@ -7,5 +7,5 @@
 
 .tecla.focus,
 .tecla:focus{
-    box-shadow: 3px 3px 3px gold;
+    box-shadow: 3px gold;
 }
