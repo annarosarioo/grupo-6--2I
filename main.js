@@ -6,15 +6,21 @@ function TocaSomPom (idElementoAudio) {
 const ListaDeSons = document.querySelectorAll('.tecla');
 let Contador = 0;
 
+while (Contador< Lista.lenght) {
+  const tecla = ListaDeSons[Contador];
+  const classe = tecla.classList[1];
+
+}
+
    const classe = ListaDeSons[Contador].classList[1];
    //console.log(classe);
 
-   const idSom = '#som_${classe}';
+   const idSom = `#som_${classe}`;
    //console.log(idSom);
 
  
    ListaDeSons[Contador].onclick = function () {
-     tocar ("#som_tecla_toim")
+     tocar (idSom)
    }
 
    Contador = Contador + 1;
@@ -26,7 +32,6 @@ let Contador = 0;
       
     }
     
-
    tecla.onkeyup = function () {
     tecla.classList.remove('ativa');
  }
