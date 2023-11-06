@@ -9,3 +9,39 @@
 .tecla:focus{
     box-shadow: 3px 3px 3px 3px gold;
 }
+
+body{
+    background-image:linear-gradient(90deg,black,red,black);
+  
+  }
+  h1{
+    font-family:sans-serif;
+    color:white;
+    text-shadow: 3px, 3px, 3px;
+    
+   
+  }
+  h2{
+    color:black;
+    font-size:20px;
+    font-family:sans-serif;
+  }
+  .titulo{
+    
+    font-size:25px;
+    color:black;
+    font-family:monospace;
+  }
+  .bloco{
+    background:gray;
+  text-align:center;
+    width:300px;
+    border-style:double;
+    border-radius:5px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    background-position:absolute;
+    display:table;
+    vertical-align:absolute;
+  }
