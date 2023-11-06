@@ -11,7 +11,7 @@
 }
 
 body{
-    background-image:linear-gradient(90deg,black,red,black);
+    background-image:linear-gradient(90deg,black,rgb(252, 0, 176),black);
   
   }
   h1{
