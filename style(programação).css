@@ -45,3 +45,25 @@ body{
     display:table;
     vertical-align:absolute;
   }
+
+  .input{
+    border-radius:10px;
+    color:red;
+    inline-size:1cm;
+    text-align:center;
+   }
+  #sinal{
+    color:white;
+  }
+  h3{
+    text-align:right;
+    font-family:bradley hand, cursive;
+  }
+  #apresentacao{
+    text-align:center;
+    padding:0.3cm;
+  }
+  #seunome{
+    font-size:25px;
+    font-family:sans-serif;
+  }
